@@ -51,6 +51,7 @@ class Users extends PureComponent {
                      onChange={(e)=>this.setState({search : e.target.value})}
                      />
                  </div>}
+
                 {!this.state.showUserRepo && userNameFilter.map((user) =>
                 <div 
                     className="userName" 
@@ -64,7 +65,7 @@ class Users extends PureComponent {
                 {this.state.showUserRepo && 
                     <div>
                         <div className='page-heading'>
-                            <a className='back-button' href="/">Back </a>
+                            <a className='back-button' href={window.location.href}>Back </a>
                             Repositories :
                         </div> 
                         {this.state.repoData && this.state.repoData.map((repos, index)=>
