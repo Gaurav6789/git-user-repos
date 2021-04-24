@@ -40,7 +40,7 @@ class Users extends PureComponent {
                 {/* Git User section */}
                 {!this.state.showUserRepo &&
                  <div className='page-heading'>
-                     Git Users List : 
+                     Git Users List : <br/>
                      <input 
                      type="text" 
                      placeholder ='Search User'
@@ -68,7 +68,7 @@ class Users extends PureComponent {
                         </div> 
                         {this.state.repoData && this.state.repoData.map((repos, index)=>
                             <div className="repoName">
-                                {`--> ${index+1}. `+ repos.full_name}
+                                {`${index+1}. `+ repos.full_name}
                             </div>
                )}</div>
             }
