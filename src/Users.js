@@ -17,8 +17,6 @@ class Users extends PureComponent {
     componentDidMount(){
         fetch(`https://api.github.com/users?per_page${this.state.limit}`,{
             method:'GET',
-            Authorization: "Basic Z2F1cmF2Njc4OTpHYXVyYXZANjc4OQ==",
-            'X-GitHub-Request-Id': '9CBE:0CC4:171F6F3:278E961:6083A6F6',
         })
         .then(response => response.json())
         .then(response => this.setState({userData:response}))
